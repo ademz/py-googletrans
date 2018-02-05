@@ -63,6 +63,11 @@ class Translator(object):
         except ImportError:  # pragma: nocover
             pass
 
+
+    def set_session(self, session):
+        self.session = session
+
+
     def _pick_service_url(self):
         if len(self.service_urls) == 1:
             return self.service_urls[0]
